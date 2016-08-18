@@ -56,21 +56,21 @@ Execute the integration test with configuration of xml files for insert and dele
 For these Examples I'm using postman pointing to http://localhost:8080/users
 
 * Save a User: (http://localhost:8080/users/save) POST Method for request
-{
-	"name":"Peter",
-	"lastName":"Norbil",
-	"phone":"679878878",
-	"email":"email@server.com"
-}
+`{`
+	`"name":"Peter",`
+	`"lastName":"Norbil",`
+	`"phone":"679878878",`
+	`"email":"email@server.com"`
+`}`
 
 * Update a User: (http://localhost:8080/users/update) POST Method for request
-{
-	"userId":"1"
-	"name":"Peter",
-	"lastName":"Norbil",
-	"phone":"679878878",
-	"email":"email@server.com"
-}
+`{`
+	`"userId":"1",`
+	`"name":"Peter",`
+	`"lastName":"Norbil",`
+	`"phone":"679878878",`
+	`"email":"email@server.com"`
+`}`
 
 * Delete a User: (http://localhost:8080/users/delete/1) GET Method for request 
 
