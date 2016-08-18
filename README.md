@@ -3,39 +3,50 @@ A demo project built with several technologies, Spring boot, liquibase, dozer, J
 
 The project is ready to run, it exposes a rest service(UserController) using Spring Hateoas, the controller exposes the options to save, find, update and delete users with the UserControllers. It has a classic architecture, (Controller, Facades, Services, Repositories and Entities), it can be used as a template to start a project, it uses gradle to manage the build process and dependencies, I'll explain the technologies used and the idea of each one of them.
 
-Gradle
+##Gradle
 
 Manage the build process and the dependencies of the project
-Liquibase:
+
+##Liquibase:
 
 Manage the log changes of the database, the file that manage this is db.changelog-master.xml
-Spring Data
+
+##Spring Data
 
 It uses repositories interfaces in the package com.demo.concept.persistence.repository.
-JPA and Hibernate
+
+##JPA and Hibernate
 
 Entities in the package com.demo.concept.persistence.entity, database.properties
-Persistence Configuration
+
+##Persistence Configuration
 
 The datasource and TransactionManager is configured in the com.demo.concept.config.PersistenceConfig
-Dozer
+
+##Dozer
 
 Dozer is used to mapping Entities and Resources classes, each class of these have the annotation mapping to identify the field to map, the process of mapping is executed in the assembler class of the Spring Hateoas(UserResourceAssembler)
-Spring Hateoas
+
+##Spring Hateoas
 
 There are a definition of resource class, assembler class to create the links to each resource, the controller manage the events and the assembler converts the the class from entity to resource using dozer.
-Spring boot.
+
+##Spring boot.
 
 It uses spring boot to start the configuration and start the execution, the folder config hold the class for these idea.
-Junit.
+
+##Junit.
 
 There are several unit test for Facades, service and Controller
-Database
+
+##Database
 
 I'm using MySql as database to store the information
-Spring test
+
+##Spring test
 
 Integration test with dbunit for manage the insertion of the information and delete after execute the test
-DBUnit
+
+##DBUnit
 
 Execute the integration test with configuration of xml files for insert and delete the data needed for the test.
